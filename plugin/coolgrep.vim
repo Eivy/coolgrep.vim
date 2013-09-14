@@ -13,8 +13,6 @@ set cpo&vim
 " }}}
 
 function! s:cmd_coolgrep(vimgrep, args)
-    " Stop autocmd
-    autocmd! QuickFixCmdPre,QuickFixCmdPost
     " Execute :vimgrep
     execute (a:vimgrep ? 'vimgrep' : 'grep') a:args
     " Get rid of comment lines.
